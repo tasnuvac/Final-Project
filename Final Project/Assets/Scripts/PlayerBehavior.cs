@@ -9,17 +9,25 @@ public class PlayerBehavior : MonoBehaviour
     private float _vInput;
     private float _hInput;
 
+    public float JumpVelocity = 5f;
+    private bool _isJumping;
+
     private Rigidbody _rb;
  
     void Start()
     {
 
         _rb = GetComponent<Rigidbody>();
+
      }
     void Update()
     {
+        // rotation of player
         _vInput = Input.GetAxis("Vertical") * MoveSpeed;
         _hInput = Input.GetAxis("Horizontal") * RotateSpeed;
+
+        // jumping
+        _isJumping |= Input.GetKeyDown(KeyCode.Space);
         /*
         this.transform.Translate(Vector3.forward * _vInput *
         Time.deltaTime);
@@ -28,7 +36,7 @@ public class PlayerBehavior : MonoBehaviour
      }
     void FixedUpdate()
     {
-
+        // roation of player
         Vector3 rotation = Vector3.up * _hInput;
 
         Quaternion angleRot = Quaternion.Euler(rotation *
@@ -38,5 +46,10 @@ public class PlayerBehavior : MonoBehaviour
         this.transform.forward * _vInput * Time.fixedDeltaTime);
 
         _rb.MoveRotation(_rb.rotation * angleRot);
+
+        // jumping
+        if(_isJumping)
+        _rb.AddForce(Vector3.up * JumpVelocity, ForceMode.Impulse);
+        _isJumping = false;
     }
 } 
