@@ -11,6 +11,7 @@ public class PlayerBehavior : MonoBehaviour
 
     public float JumpVelocity = 5f;
     private bool _isJumping;
+    private Vector3 startPosition;
 
     private Rigidbody _rb;
  
@@ -18,6 +19,7 @@ public class PlayerBehavior : MonoBehaviour
     {
 
         _rb = GetComponent<Rigidbody>();
+        startPosition = transform.position;
 
      }
     void Update()
@@ -51,5 +53,14 @@ public class PlayerBehavior : MonoBehaviour
         if(_isJumping)
         _rb.AddForce(Vector3.up * JumpVelocity, ForceMode.Impulse);
         _isJumping = false;
+    }
+
+    void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.CompareTag("Ground"))
+        {
+            transform.position = startPosition;
+        }
+
     }
 } 
