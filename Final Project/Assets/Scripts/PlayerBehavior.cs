@@ -11,7 +11,7 @@ public class PlayerBehavior : MonoBehaviour
 
     public float JumpVelocity = 5f;
     private bool _isJumping;
-    private Vector3 startPosition;
+    public Vector3 startPosition;
 
     private Rigidbody _rb;
  
@@ -19,6 +19,7 @@ public class PlayerBehavior : MonoBehaviour
     {
 
         _rb = GetComponent<Rigidbody>();
+        // storing start position
         startPosition = transform.position;
 
      }
@@ -55,12 +56,9 @@ public class PlayerBehavior : MonoBehaviour
         _isJumping = false;
     }
 
-    void OnCollisionEnter(Collision collision)
+    public void ResetToStartPosition()
     {
-        if (collision.gameObject.CompareTag("Ground"))
-        {
-            transform.position = startPosition;
-        }
-
+        // Resets the player position to the start
+        transform.position = startPosition;  
     }
 } 
