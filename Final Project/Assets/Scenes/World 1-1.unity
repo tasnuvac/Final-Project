@@ -1171,7 +1171,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: Third point
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 3163816877264050226, guid: eed50c7e3f825b3448969b51a0d5f06f, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
