@@ -7,6 +7,8 @@ public class ItemBehavior : MonoBehaviour
     {
         if(collision.gameObject.name == "Player")
         {
+
+            // Once the item is collected, it gets "destroyed" so the player knows they picked it up
             Destroy(this.transform.gameObject);
             Debug.Log("Item collected!");
         }

@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class CoinBehavior : MonoBehaviour
 {
+
+    // sets rotation speed
     public int RotationSpeed = 100;
     private Transform coinTransform;
     // Start is called before the first frame update

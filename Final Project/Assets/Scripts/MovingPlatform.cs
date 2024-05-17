@@ -4,15 +4,22 @@ using UnityEngine;
 
 public class MovingPlatform : MonoBehaviour
 {
-    public float height = 5.0f;   // Maximum height the platform 
-    public float speed = 1.0f;     // Speed of platform
-    public float stopYPosition = 5.0f; // The y position where the platform should stop moving
+    // Maximum height the platform 
+    public float height = 5.0f;   
+
+    // Speed of platform
+    public float speed = 1.0f;     
+
+    // The y position where the platform should stop moving
+    public float stopYPosition = 5.0f; 
     private float originalY;
 
     void Start()
     {
         originalY = transform.position.y;
-        stopYPosition = originalY + height; // Calculate stop position based on original height and added height
+
+        // Calculate stop position based on original height and added height
+        stopYPosition = originalY + height; 
     }
 
     void Update()
@@ -27,4 +34,6 @@ public class MovingPlatform : MonoBehaviour
         transform.position = new Vector3(transform.position.x, newY, transform.position.z);
     }
 }
+
+
 

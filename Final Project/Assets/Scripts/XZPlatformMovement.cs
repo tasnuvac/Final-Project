@@ -35,6 +35,6 @@ public class MovingPlatformXZ : MonoBehaviour
         {
             // Move to the next position, loop back to the start
             currentIndex = (currentIndex + 1) % positions.Length; 
+        }
     }
-}
 }

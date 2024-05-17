@@ -7,26 +7,26 @@ EditorBuildSettings:
   m_Scenes:
   - enabled: 1
     path: Assets/Scenes/World 1-1.unity
-    guid: 9fc0d4010bbf28b4594072e72b8655ab
-  - enabled: 1
-    path: Assets/Scenes/World 1-2.unity
-    guid: 20dccd348b17c1d489b649292eb371b5
-  - enabled: 1
-    path: Assets/Scenes/World 1-3.unity
-    guid: 9cfa108e0278b514486f01060754e9cc
-  - enabled: 1
-    path: Assets/Scenes/World 1-4.unity
-    guid: 8fbeeaea4aaa6a348b38f17e2c8b6392
-  - enabled: 1
-    path: Assets/Scenes/World 2-1.unity
     guid: bae5e3e4abcfe9c4096cf2d0c0604876
   - enabled: 1
-    path: Assets/Scenes/World 2-2.unity
+    path: Assets/Scenes/World 1-2.unity
     guid: e0e9b247e99f66a43baeca07f9ef4425
   - enabled: 1
-    path: Assets/Scenes/World 2-3.unity
+    path: Assets/Scenes/World 1-3.unity
     guid: 61d6b6a6235700742883f20e8eecce69
   - enabled: 1
-    path: Assets/Scenes/World 2-4.unity
+    path: Assets/Scenes/World 1-4.unity
     guid: b80b9cdb23e7da14ba36ee2d6666a73c
+  - enabled: 1
+    path: Assets/Scenes/World 2-1.unity
+    guid: 9fc0d4010bbf28b4594072e72b8655ab
+  - enabled: 1
+    path: Assets/Scenes/World 2-2.unity
+    guid: 20dccd348b17c1d489b649292eb371b5
+  - enabled: 1
+    path: Assets/Scenes/World 2-3.unity
+    guid: 9cfa108e0278b514486f01060754e9cc
+  - enabled: 1
+    path: Assets/Scenes/World 2-4.unity
+    guid: 8fbeeaea4aaa6a348b38f17e2c8b6392
   m_configObjects: {}
